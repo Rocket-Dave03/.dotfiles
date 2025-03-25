@@ -76,7 +76,7 @@ return {
 		  require('lspconfig')['clangd'].setup {capabilities = capabilities}
 		  require('lspconfig')['cmake'].setup {capabilities = capabilities}
 		  require('lspconfig')['pyright'].setup {capabilities = capabilities}
-		  require('lspconfig')['asm_lsp'].setup {capabilities = capabilities}
+		  require('lspconfig')['jdtls'].setup {capabilities = capabilities}
 		end
 	},
 
