@@ -53,8 +53,7 @@ output * bg /home/rocketdave/.dotfiles/wallpaper.png fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
+# exec swayidle -w \timeout 300 'swaylock -f -c 000000' \
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
@@ -89,7 +88,8 @@ input "type:touchpad" {
 
     bindsym $mod+Tab exec "rofi -show window"
 
-	bindsym Print exec "QT_QPA_PLATFORM=wayland XDG_CURRENT_DESKTOP=sway flameshot gui"
+	bindsym $mod+Print exec "/home/rocketdave/.config/sway/screenshot.fish --ocr"
+	bindsym Print exec "/home/rocketdave/.config/sway/screenshot.fish --copy"
 
 
 
