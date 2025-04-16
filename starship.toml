@@ -19,6 +19,7 @@ $julia\
 $nodejs\
 $nim\
 $rust\
+$python\
 $scala\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
@@ -136,6 +137,13 @@ format = '[ $symbol ($version) ]($style)'
 symbol = " "
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
+
+[python]
+format = "[ ${symbol}${pyenv_prefix}${version} (\\(${virtualenv}\\)) ]($style)"
+pyenv_version_name = false
+pyenv_prefix = "pyenv "
+style = "bg:#86BBD8"
+symbol = " "
 
 [time]
 disabled = false
