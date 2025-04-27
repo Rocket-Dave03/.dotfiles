@@ -32,7 +32,7 @@ function read_confirm --description 'Ask the user for confirmation' --argument p
 end
 
 if status is-interactive
-	hyfetch
+	hyfetch -b fastfetch
 	alias ls "exa --group-directories-first --icons=auto"
 	alias rm "trash"
 
