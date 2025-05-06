@@ -12,6 +12,8 @@ vim.keymap.set({"n", "v", "i"}, "<F5>", "<Cmd>! ./run.sh<CR>")
 vim.opt.tabstop = 4 
 vim.opt.shiftwidth = 4
 
+vim.opt.foldmethod = "syntax"
+
 vim.opt.number = true
 
 -- Show Diagnositcs (Erros/Warnings)
