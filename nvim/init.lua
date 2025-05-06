@@ -18,3 +18,17 @@ vim.opt.number = true
 
 -- Show Diagnositcs (Erros/Warnings)
 vim.diagnostic.config({ virtual_text = true })
+
+-- Terminal convenience
+vim.keymap.set({"t"}, "<C-w>", "<C-\\><C-n><C-w>")
+
+vim.api.nvim_create_autocmd({'TermOpen', 'BufEnter', 'BufWinEnter'}, {
+	desc = 'Set terminal to insert mode',
+	group = termgroup,
+	pattern = 'term://*',
+	callback = function()
+		vim.schedule(function()
+			vim.cmd(':startinsert')
+		end)
+	end,
+})
