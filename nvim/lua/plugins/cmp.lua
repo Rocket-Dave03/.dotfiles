@@ -78,6 +78,7 @@ return {
 		  require('lspconfig')['cmake'].setup {capabilities = capabilities}
 		  require('lspconfig')['pyright'].setup {capabilities = capabilities}
 		  require('lspconfig')['jdtls'].setup {capabilities = capabilities}
+		  require('lspconfig')['openscad_lsp'].setup {capabilities = capabilities}
 		end
 	},
 
