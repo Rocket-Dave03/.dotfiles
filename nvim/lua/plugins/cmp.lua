@@ -80,6 +80,7 @@ return {
 		  require('lspconfig')['jdtls'].setup {capabilities = capabilities}
 		  require('lspconfig')['openscad_lsp'].setup {capabilities = capabilities}
 		  require('lspconfig')['lua_language_server'].setup {capabilities = capabilities}
+		  require('lspconfig')['fish_lsp'].setup {capabilities = capabilities}
 		end
 	},
 
@@ -134,6 +135,7 @@ return {
 		  "vimdoc",
 		  "xml",
 		  "yaml",
+		  "fish",
 		},
 		incremental_selection = {
 		  enable = true,
