@@ -79,6 +79,7 @@ return {
 		  require('lspconfig')['pyright'].setup {capabilities = capabilities}
 		  require('lspconfig')['jdtls'].setup {capabilities = capabilities}
 		  require('lspconfig')['openscad_lsp'].setup {capabilities = capabilities}
+		  require('lspconfig')['lua_language_server'].setup {capabilities = capabilities}
 		end
 	},
 
