@@ -12,7 +12,9 @@ vim.keymap.set({"n", "v", "i"}, "<F5>", "<Cmd>! ./run.sh<CR>")
 vim.opt.tabstop = 4 
 vim.opt.shiftwidth = 4
 
-vim.opt.foldmethod = "syntax"
+-- Set Folding
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldmethod = "expr"
 
 vim.opt.number = true
 
