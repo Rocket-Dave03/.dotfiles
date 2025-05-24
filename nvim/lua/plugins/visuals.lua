@@ -10,7 +10,7 @@ return {
 		end,
   	},
 	{ "arcticicestudio/nord-vim" },
-	{ "frazrepo/vim-rainbow" },
+	{ "HiPhish/rainbow-delimiters.nvim" },
 	{
 		'MeanderingProgrammer/render-markdown.nvim',
 		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
@@ -18,7 +18,6 @@ return {
 		---@type render.md.UserConfig
 		opts = {},
 	},
-
 	{
         "3rd/image.nvim",
 		build = false,
