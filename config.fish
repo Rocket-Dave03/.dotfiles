@@ -4,7 +4,7 @@ function is_venv --description "Check is provided dir is a python virtual enviro
 end
 
 function check_venv --description "Check if a dir is a/is in a python virtual environement" --argument check_path
-	set -f path "$(realpath $check_path/..)"
+	set -f path "$(realpath -q $check_path/..)"
 	if test "$path" != "/"
 		is_venv $check_path || check_venv $path
 	else
@@ -47,6 +47,10 @@ if status is-interactive
 		if check_venv .
 			if read_confirm "Activate venv in $PWD"
 				source ./bin/activate.fish
+			end
+		else if check_venv ./.venv
+			if read_confirm "Activate venv in $PWD"
+				source ./.venv/bin/activate.fish
 			end
 		else if test -n "$VIRTUAL_ENV"
 			echo "Leaving venv $VIRTUAL_ENV"
