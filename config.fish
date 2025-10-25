@@ -40,7 +40,11 @@ if status is-interactive
 
 	starship init fish | source
 
-
+	function change_brightness
+		if test $XDG_SESSION_TYPE = "x11"
+			read -P "Enter Bightness: " val; xrandr | grep -w connected | cut -f '1' -d ' ' | xargs -I "OUTPUT_NAME" xrandr --output OUTPUT_NAME --brightness $val
+		end
+	end
 
 	function activate_venv --on-variable PWD --description 'Activate python venvs on cd'
 		status --is-command-substitution; and return
