@@ -81,6 +81,7 @@ return {
 		  require('lspconfig')['openscad_lsp'].setup {capabilities = capabilities}
 		  require('lspconfig')['lua_language_server'].setup {capabilities = capabilities}
 		  require('lspconfig')['fish_lsp'].setup {capabilities = capabilities}
+		  require('lspconfig')['ts_ls'].setup {capabilities = capabilities}
 		end
 	},
 
